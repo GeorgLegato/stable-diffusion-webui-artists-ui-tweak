@@ -1,0 +1,43 @@
+/* customs */
+/* right output column twice as left slider column */
+#txt2img_results, #img2img_results  {
+    flex: 2 !important; 
+}
+
+/* output gallery shall use 50% of your total screen/browser size */
+#txt2img_gallery_container, #img2img_gallery_container {
+    height: 80vh !important;       
+}
+
+/* selected image shall use full height of the gallery window (which uses 50vh) */
+#txt2img_gallery, #img2img_gallery  {
+    height: 100% !important;       
+}
+
+/* somewhere the img height was limited to 55vh... */
+#txt2img_gallery > div.fixed-height.preview, #img2img_gallery > div.fixed-height.preview {
+    max-height: none !important;
+}
+
+#txt2img_gallery > div.grid-wrap.fixed-height, #img2img_gallery > div.grid-wrap.fixed-height {
+    max-height: none !important;
+}
+
+#quicksettings > div, #quicksettings > fieldset {
+    max-width: none !important;
+    min-width: auto;
+}
+
+#quicksettings {
+    flex: row;
+    margin-bottom: 2em;
+}
+
+
+#txt2img_prompt_container {
+    flex-direction: row;
+}
+
+#txt2img_actions_column {
+    flex-grow:  0;
+}
