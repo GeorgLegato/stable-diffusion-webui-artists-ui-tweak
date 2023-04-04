@@ -17,10 +17,22 @@ This brings the Tab-button to the upper row, where they actually belong to.
 ![image](https://user-images.githubusercontent.com/7210708/229652866-0e3bf37b-c0c4-4475-a6da-2cb9b6574ba6.png)
 
 
+## Combine prompts and technical sliders to one left column
+Smaller prompts, so even more space for the output gallery. But the generate button is too large and wastes space...
+![image](https://user-images.githubusercontent.com/7210708/229653133-5416254e-4ed3-4c94-9fff-ad5280b43290.png)
+![image](https://user-images.githubusercontent.com/7210708/229653412-dc1d235a-3f4f-440c-b629-e4036fe7791b.png)
 
 
-## Installation
-1) Open your Sd-WEbui
+## Save space on generate button, all in a single row
+Bring Generate Button, Tools and the Style dropdown in one row and align it at bottom line.
+Todo: Generate button as high as tools.
+
+![image](https://user-images.githubusercontent.com/7210708/229653677-07e10017-3439-4ed7-8221-3d13efbcf61a.png)
+![image](https://user-images.githubusercontent.com/7210708/229653833-5264aa3b-9b1e-412d-9f53-f5289b5901cd.png)
+
+
+# Installation
+1) Open your SD-Webui
 2) Goto Extension Tab
 3) add Extenion by pasting this URL, since this extension is not public in the repository, yet
 https://github.com/GeorgLegato/stable-diffusion-webui-artists-ui-tweak
