@@ -4,6 +4,7 @@ Space was saved to enlarge gallery and have a axial, modular layout.
 
 * Currently in this beta the gui modifications are limited on the txt2img-tab
 * Ignore in my screenshot the dark theme, it is applied using my browser-setting. This extension does not do any colors.
+* Pre-requisite: This extension is dedicated to the current SD-Webui with Gradio3.23-update as of March 2023.
 
 # Example screenshots
 ## Only styles active, no other tweaks.
