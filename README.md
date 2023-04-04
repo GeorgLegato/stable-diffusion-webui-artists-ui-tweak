@@ -30,6 +30,13 @@ Todo: Generate button as high as tools.
 ![image](https://user-images.githubusercontent.com/7210708/229653677-07e10017-3439-4ed7-8221-3d13efbcf61a.png)
 ![image](https://user-images.githubusercontent.com/7210708/229653833-5264aa3b-9b1e-412d-9f53-f5289b5901cd.png)
 
+## All settings on, 8 images in gallery
+![image](https://user-images.githubusercontent.com/7210708/229654057-5f707b6a-7a17-4c64-8092-0a532eb271b4.png)
+
+## Thats why we need this:
+Large preview on single selected image from the gallery.
+![image](https://user-images.githubusercontent.com/7210708/229654119-e03091d3-abfa-4906-9397-13810b288f5c.png)
+
 
 # Installation
 1) Open your SD-Webui
