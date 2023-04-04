@@ -34,8 +34,9 @@
 }
 
 
+/* if not side-by-side-prompt */
 #txt2img_prompt_container {
-    flex-direction: row;
+    flex-direction: column;
 }
 #txt2img_prompt_container>div {
     flex: 1 0 0%;

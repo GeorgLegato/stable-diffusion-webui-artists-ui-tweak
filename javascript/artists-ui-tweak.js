@@ -31,6 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 return
             }
 
+            /* hide our pseudo-tab */
+            const tabbuttons = gradioApp().querySelectorAll(".tab-nav>button")
+            tabbuttons.forEach((b) => { if ("artists-ui-tweak" == b.innerText) b.style.display = "none" })
+
             sdwebui_sharedopts = JSON.parse(shopts.innerText)
 
             if (sdwebui_sharedopts) {

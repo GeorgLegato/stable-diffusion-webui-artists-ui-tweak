@@ -22,9 +22,9 @@ def after_component(component, **kwargs):
 def add_tab():
       
     json_object = json.dumps(shared.opts.data, indent = 4) 
-    with gr.Blocks(analytics_enabled=False) as ui:
-            V = gr.HTML(value="<script id='sdwebui_sharedopts_script'>"+json_object+"</script>", elem_id="art-ui-tw-sh-options")
-    return [(V, "artists-ui-tweak", "artists-ui-tweak")]
+    with gr.Blocks(analytics_enabled=False, css="display:none;") as ui:
+            V = gr.HTML(value="<script id='sdwebui_sharedopts_script'>"+json_object+"</script>", elem_id="art-ui-tw-sh-options", elem_classes="hidden")
+    return [(ui, "artists-ui-tweak", "artists-ui-tweak")]
 
 def on_ui_settings():
     section = ('artists-ui-tweak', "Artists UI Tweak")
