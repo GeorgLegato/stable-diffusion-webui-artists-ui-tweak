@@ -58,6 +58,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     txt2img_promp_container.style.flexGrow = getopt("artuitw_settings2promptsXratio", 1)
 
+                    /* align tool icon to the style bar */
+                    txt2img_tool_icons.style.justifyContent="flex-end"
+
+
                     txt2img_promp_container.appendChild(txt2img_settings)
 
                     /* build up right column from scratch, so clean up action column first */

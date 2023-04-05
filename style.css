@@ -2,6 +2,7 @@
 /* right output column twice as left slider column */
 #txt2img_results, #img2img_results  {
     flex: 2 !important; 
+    padding: 0!important;
 }
 
 /* output gallery shall use 50% of your total screen/browser size */
@@ -11,7 +12,7 @@
 
 /* selected image shall use full height of the gallery window (which uses 50vh) */
 #txt2img_gallery, #img2img_gallery  {
-    height: 100% !important;       
+    height: 100% !important;
 }
 
 /* somewhere the img height was limited to 55vh... */
@@ -37,9 +38,10 @@
 /* if not side-by-side-prompt */
 #txt2img_prompt_container {
     flex-direction: column;
+    height: fit-content;
 }
 #txt2img_prompt_container>div {
-    flex: 0 0 0% !important;
+    flex: 1 0 0% !important;
 }
 
 #txt2img_actions_column {
