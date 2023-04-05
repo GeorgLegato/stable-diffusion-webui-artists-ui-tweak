@@ -29,9 +29,6 @@ def add_tab():
 def on_ui_settings():
     section = ('artists-ui-tweak', "Artists UI Tweak")
 
-    shared.opts.add_option("artuitw_min_generate", shared.OptionInfo(
-        True, "Minimize Generate button as tool icon", gr.Checkbox, {"interactive": True}, section=section))
-
     shared.opts.add_option("artuitw_quicksettings2settings", shared.OptionInfo(
         True, "Move quicksettings to image setting panel ", gr.Checkbox, {"interactive": True}, section=section))
 

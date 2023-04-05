@@ -38,37 +38,54 @@ document.addEventListener("DOMContentLoaded", () => {
             sdwebui_sharedopts = JSON.parse(shopts.innerText)
 
             if (sdwebui_sharedopts) {
-                const quicksettings = gradioApp().getElementById("quicksettings")
-                const txt2img_settings = gradioApp().getElementById("txt2img_settings")
 
                 if (getopt("artuitw_quicksettings2settings", false)) {
+                    const txt2img_settings = gradioApp().getElementById("txt2img_settings")
+                    const quicksettings = gradioApp().getElementById("quicksettings")
                     txt2img_settings.insertBefore(quicksettings, txt2img_settings.firstElementChild)
                 }
 
                 if (getopt("artuitw_settings2promptswidth", false)) {
-                    const promptContainer = gradioApp().getElementById("txt2img_prompt_container")
-                    promptContainer.appendChild(txt2img_settings)
+                    const txt2img_promp_container = gradioApp().getElementById("txt2img_prompt_container")
+                    const exnet = gradioApp().querySelector("#txt2img_extra_networks.gradio-row").parentElement // + its form; attention tool-icon has same ID!
+                    const txt2img_results = gradioApp().getElementById("txt2img_results")
+                    const txt2img_tools = gradioApp().getElementById("txt2img_tools")
+                    const txt2img_styles_row = gradioApp().getElementById("txt2img_styles_row")
+                    const txt2img_generate_box = gradioApp().getElementById("txt2img_generate_box")
+                    const txt2img_token_button = gradioApp().getElementById("txt2img_token_button")
+                    const txt2img_negative_token_button = gradioApp().getElementById("txt2img_negative_token_button")
+                    const txt2img_tool_icons = gradioApp().getElementById("txt2img_clear_prompt").parentElement // actual div has no id 
 
-                    txt2img_actions_column.appendChild(gradioApp().getElementById("txt2img_results"))
-                    gradioApp().getElementById("txt2img_prompt_container").style.flexGrow = getopt("artuitw_settings2promptsXratio", 1)
+                    txt2img_promp_container.style.flexGrow = getopt("artuitw_settings2promptsXratio", 1)
 
-                    gradioApp().getElementById("txt2img_tools").appendChild(
-                        gradioApp().getElementById("txt2img_styles_row")
-                    )
+                    txt2img_promp_container.appendChild(txt2img_settings)
+
+                    /* build up right column from scratch, so clean up action column first */
+                    tmpdiv = document.createElement("div")
+                    while (txt2img_actions_column.childNodes.length > 0) {
+                        tmpdiv.appendChild(txt2img_actions_column.childNodes[0]);
+                    }
+
+                    if (txt2img_actions_column.children.length > 0) throw "should not happen"
+
+                    {
+                        txt2img_actions_column.appendChild(txt2img_tools)
+                        txt2img_actions_column.appendChild(exnet)
+                        txt2img_actions_column.appendChild(txt2img_results)
+                        {
+                            txt2img_tools.appendChild(txt2img_generate_box)
+                            txt2img_tools.appendChild(txt2img_token_button)
+                            txt2img_tools.appendChild(txt2img_negative_token_button)
+                            txt2img_tools.appendChild(txt2img_tool_icons)
+                            txt2img_tools.appendChild(txt2img_styles_row)
+                            txt2img_tools.style.alignContent = "flex-end"
+                            txt2img_styles_row.style.alignContent = "flex-end"
+                        }
+                    }
                 }
-
-                if (getopt("artuitw_min_generate", false)) {
-                    const gen = gradioApp().getElementById("txt2img_generate_box")
-                    const firstButton = gradioApp().querySelector("#txt2img_tools button")
-                    firstButton.parentElement.insertBefore(gen, firstButton)
-
-                    gradioApp().getElementById("txt2img_tools").style.alignContent = "flex-end"
-                    gradioApp().getElementById("txt2img_styles_row").style.alignContent = "flex-end"
-
-                }
-
             }
         }
+
         else {
             setTimeout(onload, 2000);
         }

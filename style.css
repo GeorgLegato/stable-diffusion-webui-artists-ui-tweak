@@ -39,7 +39,7 @@
     flex-direction: column;
 }
 #txt2img_prompt_container>div {
-    flex: 1 0 0%;
+    flex: 0 0 0% !important;
 }
 
 #txt2img_actions_column {
