@@ -45,3 +45,18 @@
 #txt2img_actions_column {
     flex-grow:  0;
 }
+
+/* same height as tool icons */
+#txt2img_generate, #img2img_generate, #txt2img_skip, #txt2img_interrupt {
+    min-height: 2.4em !important;
+    height: 2.4em !important;
+    flex: 0 !important;
+    align-content: center;
+    bottom: 0px;
+}
+
+#txt2img_generate_box,#img2img_generate_box {
+    align-content: flex-end;
+    padding: 0 !important;
+    flex-direction: row;
+}
