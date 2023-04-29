@@ -38,12 +38,10 @@ def on_ui_settings():
     shared.opts.add_option("artuitw_settings2promptsXratio", shared.OptionInfo(
         1, "If setting2prompt width, which width-ratio between both columns (0: minimize setting, 1: 50/50,  6: minimize output gallery column)", gr.Slider, {"minimum": 0, "maximum": 6, "step": 0.1}, section=section))
 
+    shared.opts.add_option("artuitw_galleryheightVH", shared.OptionInfo(
+        50, "Gallery height in _absolute_ percent of your screen (not remaining height)", gr.Slider, {"minimum": 0, "maximum": 100, "step": 10}, section=section))
+  
+
 script_callbacks.on_ui_tabs(add_tab)
 script_callbacks.on_after_component(after_component)
 script_callbacks.on_ui_settings(on_ui_settings)
-
-
-""" NOT YET implemented, todo
-    shared.opts.add_option("artuitw_prompt_sidebyside", shared.OptionInfo(
-        True, "Split prompts to side-by-side ", gr.Checkbox, {"interactive": True}, section=section))
-"""

@@ -5,10 +5,12 @@
     padding: 0!important;
 }
 
-/* output gallery shall use 50% of your total screen/browser size */
+/* MOVED TO SETTINGS as dynamic parameter
+output gallery shall use 50% of your total screen/browser size 
 #txt2img_gallery_container, #img2img_gallery_container {
     height: 80vh !important;       
 }
+*/
 
 /* selected image shall use full height of the gallery window (which uses 50vh) */
 #txt2img_gallery, #img2img_gallery  {

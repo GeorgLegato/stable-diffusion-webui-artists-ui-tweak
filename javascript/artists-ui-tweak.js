@@ -45,6 +45,21 @@ document.addEventListener("DOMContentLoaded", () => {
                     txt2img_settings.insertBefore(quicksettings, txt2img_settings.firstElementChild)
                 }
 
+
+                {
+                    const galVH = getopt("artuitw_galleryheightVH", 50)
+                    const txt2imgGalleryContainer = document.querySelector('#txt2img_gallery_container');
+                    const img2imgGalleryContainer = document.querySelector('#img2img_gallery_container');
+                  
+                    if (txt2imgGalleryContainer) {
+                        txt2imgGalleryContainer.style.setProperty('height', galVH, 'important');
+                    }
+                    if (img2imgGalleryContainer) {
+                        img2imgGalleryContainer.style.setProperty('height', galVH, 'important');
+
+                    }
+                }
+
                 if (getopt("artuitw_settings2promptswidth", false)) {
                     const txt2img_promp_container = gradioApp().getElementById("txt2img_prompt_container")
                     const exnet = gradioApp().querySelector("#txt2img_extra_networks.gradio-row").parentElement // + its form; attention tool-icon has same ID!
