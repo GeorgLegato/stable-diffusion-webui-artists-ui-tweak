@@ -52,11 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     const img2imgGalleryContainer = document.querySelector('#img2img_gallery_container');
                   
                     if (txt2imgGalleryContainer) {
-                        txt2imgGalleryContainer.style.setProperty('height', galVH, 'important');
+                        txt2imgGalleryContainer.style.height=galVH+"vh"
                     }
                     if (img2imgGalleryContainer) {
-                        img2imgGalleryContainer.style.setProperty('height', galVH, 'important');
-
+                        img2imgGalleryContainer.style.height=galVH+"vh"
                     }
                 }
 
